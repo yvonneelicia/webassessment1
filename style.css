@@ -1,0 +1,340 @@
+/* general */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+body {font-family: 'Roboto', sans-serif; font: 16px; font-weight:400; margin:0; padding:0;  color:black; background-color: #F2EFEA; text-decoration: none; max-width: fit-content;}
+/* text styles*/
+h1 {margin: 0 0 1em 0; font-size: 2em; font-weight: 700;}
+h2 {margin: 0 0 0.5em; font-size: 1.8em; font-weight: 700;}
+h3 {margin: 0 0 0.5em 0; font-size: 1.3em; font-weight: 700;}
+p{ margin: 0 0 1em 0; }
+a{color: black; }
+a:visited{color: brown; }
+a.btn:hover{ background-color: #E4D1B9;}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+#page {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position:relative;
+    /* Setting the id element 'page' to a max-width of 1200px.
+    Margin is set to 0 for the top and bottom and then set to auto for the right and left (centering the content). 
+    Position to relative. Any items in the 'page' element is positioned will be positioned in relation to this. 
+    It wil allow for us to reposition the navigation element as it is not inside header. 
+    which also has a position: relative, so the navigation will position in relation to the page. If we didn't put this in here and somebody opened their browser wider than 1200, the navigation would position outside of the page element, so this makes sure that everything is contained in that main page container.*/
+}
+
+a.btn{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+    border-radius: 1px;
+    border: 1px solid rgb(48, 47, 47);
+    padding: 10px 15px; /* 5px is top and bottom and 15px is right and left */
+    transition: .4s;
+}
+
+
+/* navigation element */
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0 0 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.65);
+    z-index: 100;
+}
+nav a.logo{
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding-left: 20px;
+    font-style: italic;
+    font-family: 'Snell Roundhand', 'cursive';
+}
+
+nav .menu ul li a{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    margin-left: 80px;
+    padding-bottom: 5px;
+}
+nav ul{
+    padding-left: 300px;
+}
+nav .menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav .menu ul li a:visited{
+    color: white;
+}
+nav .menu ul li a:hover{
+    color: white;
+}
+nav .menu ul li a:hover{
+    background-color:#E4D1B9
+}
+
+/* header */
+header{
+    height: 300px; background: #F2EFEA url(images/bg1200x300.jpg) no-repeat center bottom; position: relative; text-align: center; padding-left: 30px; padding-top: 280px;
+    /* Setting height of header, the background properties and position. 
+    The relative positioning meansthat any items positioned inside of the page element will be positioned in relation to the header element.*/
+}
+
+header .intro span{
+    color: #864000;
+}
+
+header .intro h1{
+    font-size: 2em;
+    font-weight: 500;
+    padding-top: 70px;
+}
+
+
+
+/* general section styling */
+section{ 
+    padding: 0 30px; /* No padding on top and bottom and 30 px on right and left. Any content put in the section element won't touch the side of page. There is created space of 30px on l/r of page.*/
+    background-color: #F2EFEA;
+}
+section::after{
+    content:'';
+    display: block;
+    clear: both; /*pseudo element */
+}
+
+/* section - body */
+section.body{
+    margin-top: 60px;
+    margin-bottom: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F2EFEA;
+    position: relative;
+}
+section.body aside{
+    width: 33%; /* each aside is taking up 33 percent of full width */
+    float: left; /* allows each individual aside to line up next to each other */
+    text-align: left;
+}
+
+section.body aside .box img{
+    display: block; /* pushes any content to the left down */
+}
+section.body .box{
+    margin: 20px; /* Added a margin of 20px around the each element inside the aside */
+    width: 70%; /* images will take up 50% percent of space in the parent element */
+}
+
+section.body aside h3 a{
+    color: #6F4C5B;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: justify;
+}
+
+section.body aside h3 a:hover{
+    text-decoration: underline;
+    color: #9E7777;
+}
+/* NOTES */
+/* Margin and Padding */
+/* Every element has a bounding box. When we set margin properties,
+we are assigning space to the outside of the bounding box. When we
+set padding, we are setting the spacing inside of the object. */
+
+
+/* section - info */
+section.info{
+    background-color: #C1AC95;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+section.info article{
+    padding: 0 20px 0 400px; /* Adding padding proeprties by setting 0 px on top, 20px on the right, 0 px on the bottom and 400px to the left (this will move alot of the content to the left). */
+    background: url(images/brushes.jpg) no-repeat 0 5px ;
+    min-height: 200px; /* to ensure no content is cut-off */
+}
+section.info h2{
+    color: white;
+}
+
+/*footer */
+.footer .max-width{
+  display: flex;
+}
+
+footer {font-size: .7em; 
+    margin: 0px; 
+    padding-top: 80px;
+    padding-bottom: 10px;
+    color:black;
+    background-color: #F2EFEA;
+}
+footer .footer{
+    display: inline;
+}
+
+footer a {
+    margin-left: 30px;
+}
+footer a:visited {
+    color: brown;
+}
+footer a:hover{
+    color: #864000;
+}
+
+
+/* responsive media queury for large screens */
+@media screen and (max-width: 1000px){
+    h1 {font-size: 2.4em;}
+    /* header */
+    header div.hero {left: 56%}
+    header div.hero h1 {margin-bottom: 20px}
+    /* section - info */
+    section.info article{
+        padding-left: 400px;
+        background-size: 300px auto;
+    }
+    /* section - body */
+    section.body aside{
+        font-size: small;
+    }
+    section.body aside .box img{
+        width: 280px;
+        height: 280px;
+    }
+} 
+
+@media screen and (max-width: 907px){
+    h1 {font-size: 1.5em;}
+    h2 {font-size: 1.4em}
+      /* header */
+    header{
+          height: 220px; background-image: url(images/825.jpg); }
+    header .intro h1{
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    header .intro h1{
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    /* section - intro */
+    section.info article{
+        padding-left: 220px;
+        background-size: 200px auto;
+    }
+      /* section - body */
+      section.body aside{
+        font-size: smaller;
+    }
+    section.body aside .box img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 625px){
+    h1 {font-size: 1.2em;}
+    h2 {font-size: 1.1em}
+
+    nav ul{
+        padding-left: 5px;
+    }
+    nav .menu ul li a{
+        font-size: medium;
+
+    }
+    header .intro h1{
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    section.info article p{
+        font-size: smaller;
+    }
+    section.info article{
+        padding-left: 210px;
+        background-size: 180px auto;
+    }
+    a.btn{
+        font-size: .8em;
+        border-radius: 1px;
+        border: 1px solid rgb(48, 47, 47);
+        padding: 5px 10px; /* 5px is top and bottom and 15px is right and left */
+    }
+     /* section - body */
+     section.body aside{
+        font-size: smaller;
+        width: 100;
+        float: none;
+    }
+    section.body aside .box img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    h1 {font-size: .8em;}
+    h2 {font-size: .9em}
+
+    nav ul{
+        padding-left: 5px;
+    }
+    nav .menu ul li a{
+        font-size: medium;
+    }
+    header .intro h1{
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    section.info article{
+        padding: 120px 5px 0px 0px;
+        background-size: 300px auto;
+        min-height: initial;
+    }
+    section.info article p{
+        font-size: smaller ;
+        text-align: left;
+    }
+    section.info article h2{
+        padding-top: 90px;
+        background-size: 200px auto;
+        text-align: left;
+    }
+    section.info article .btn{
+        justify-content: center;
+    }
+    a.btn{
+        padding: 3px 8px; /* 5px is top and bottom and 15px is right and left */
+    }
+     /* section - body */
+     section.body aside{
+        font-size: smaller;
+        width: 100;
+        float: none;
+    }
+    section.body aside .box img{
+        width: 200px;
+        height: 200px;
+    }
+
+
+}
+   
